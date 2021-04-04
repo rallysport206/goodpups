@@ -27,6 +27,10 @@ function buildProfiles(images) {
     $(card).find('.dog-profile__image img').attr('src', image);
     $(card).find('.dog-profile__content').text(getContent());
     $(card).find('.dog-profile__name').text(getName());
+    $(card).attr('id', `dog-profile-${index}`);
+    $(card).click(function() {
+      $(`#dog-profile-${index}`).hide();
+    });
 
     for (var i = 0; i < rating; i++) {
       $(card).find('.dog-profile__rating').text( $(card).find('.dog-profile__rating').text() + '* ');
