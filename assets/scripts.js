@@ -44,7 +44,9 @@ function cleanUp() {
 }
 
 function getRating() {
-  return Math.floor(Math.random() * 5) + 1;
+  const rating = Math.floor(Math.random() * 5) + 1;
+
+  return rating > 3 ? rating : 3;
 }
 
 function getContent() {
