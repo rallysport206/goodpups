@@ -17,7 +17,7 @@
   object-fit: cover;
   z-index: 0;
 }
-
-.dog-profile__image {
+/* temporarily commenting out */
+/* .dog-profile__image {
   padding-bottom: 50%;
-}
+} */
