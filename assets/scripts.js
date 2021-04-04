@@ -1,7 +1,7 @@
 $(document).ready(init());
 
 function init() {
-  var limit = 12;
+  var limit = 13;
   getDogs(limit);
 }
 
@@ -11,10 +11,15 @@ function getDogs(limit) {
     success: function(result) {
       if (result.status == 'success') {
         var images = result.message;
-        buildProfiles(images);
+        buildProfiles(images.slice(0, images.length - 1));
+        buildBgImage(images.slice(images.length - 1));
       }
     }
   });
+}
+
+function buildBgImage(image) {
+  $('.section-bg').attr('src', image[0]);
 }
 
 function buildProfiles(images) {
